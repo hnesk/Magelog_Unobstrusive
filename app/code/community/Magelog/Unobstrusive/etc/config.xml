@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @category    Mage
+ * @package     Magelog_Unobstrusive
+ * @copyright   January 23 2011 jk
+ */
+-->
+<config>
+    <modules>
+	<Magelog_Unobstrusive>
+	    <version>0.1.0</version>
+	</Magelog_Unobstrusive>
+    </modules>
+    <global>
+	<models>
+	    <magelog_grid>
+		<class>Magelog_Unobstrusive_Model</class>
+	    </magelog_grid>
+	</models>
+	<helpers>
+	    <magelog_grid>
+		<class>Magelog_Unobstrusive_Helper</class>
+	    </magelog_grid>
+	</helpers>
+    </global>
+
+    <adminhtml>
+        <events>
+            <core_block_abstract_to_html_before>
+                <observers>
+                    <magelog_grid_core_block_abstract_to_html_before>
+                        <type>singleton</type>
+                        <class>magelog_grid/observer</class>
+                        <method>beforeBlockToHtml</method>
+                    </magelog_grid_core_block_abstract_to_html_before>
+                </observers>
+            </core_block_abstract_to_html_before>
+        </events>
+    </adminhtml>
+</config>

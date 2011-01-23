@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    Mage
+ * @package     Magelog_Unobstrusive
+ * @copyright   January 23 2011 jk
+ */
+-->
+<config>
+    <modules>
+        <Magelog_Unobstrusive>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Magelog_Unobstrusive>
+    </modules>
+</config>
